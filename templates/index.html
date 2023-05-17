@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Inconsolata:wght@200&family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'CSS/styles.css' %}"> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="{% static 'JS/index.js' %}"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="{% static 'CSS/glightbox.css' %}">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'CSS/style.default.css' %}" id="theme-stylesheet">
+    <!-- gLightbox-->
+    <link rel="stylesheet" href="vendor/glightbox/glightbox.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <style>
+      .hero{
+        background-image: "{% static 'images/agri1.jpeg' %}";
+        background-size: cover; 
+        background-position: center center
+      }
+
+      .translates-tr{
+        margin-top: -40px;
+      }
+      .translates-ltr{
+        margin-top: -40px
+      }
+
+      .goog-te-banner-frame{
+        display: none !important;
+        margin-top: -20px;
+      }
+      .goog-logo-link{
+        display: none !important;
+      }
+      .goog-te-gadget{
+        color: transparent !important;
+      }
+      .goog-tooltip{
+        display: none !important;
+      }
+      .goog-tooltip:hover{
+        display: none !important;
+      }
+      .goog-text-highlight{
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      body{
+        top: 0px !important;
+      }
+      .VIpgJd-ZVi9od-ORHb img {
+        display: none !important;
+      }
+      .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+        display: none !important;
+      }
+      .navbar-nav .dropdown-menu{
+        background-color: #0e0e0e;
+      }
+      #google_translate_element{background-color: white; display: inline-block; align-items: end;}
+      .goog-te-banner-frame.skiptranslate,.goog-te-gadget-simple img,img.goog-te-gadget-icon,.goog-te-menu-value span{display:none!important}
+      .goog-te-menu-frame{box-shadow:none!important}
+      .goog-te-gadget-simple{background-color:transparent!important;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,5H10.88L10,2H4A2,2 0 0,0 2,4V17A2,2 0 0,0 4,19H11L12,22H20A2,2 0 0,0 22,20V7A2,2 0 0,0 20,5M7.17,14.59A4.09,4.09 0 0,1 3.08,10.5A4.09,4.09 0 0,1 7.17,6.41C8.21,6.41 9.16,6.78 9.91,7.5L10,7.54L8.75,8.72L8.69,8.67C8.4,8.4 7.91,8.08 7.17,8.08C5.86,8.08 4.79,9.17 4.79,10.5C4.79,11.83 5.86,12.92 7.17,12.92C8.54,12.92 9.13,12.05 9.29,11.46H7.08V9.91H11.03L11.04,10C11.08,10.19 11.09,10.38 11.09,10.59C11.09,12.94 9.5,14.59 7.17,14.59M13.2,12.88C13.53,13.5 13.94,14.06 14.39,14.58L13.85,15.11L13.2,12.88M13.97,12.12H13L12.67,11.08H16.66C16.66,11.08 16.32,12.39 15.1,13.82C14.58,13.2 14.21,12.59 13.97,12.12M21,20A1,1 0 0,1 20,21H13L15,19L14.19,16.23L15.11,15.31L17.79,18L18.5,17.27L15.81,14.59C16.71,13.56 17.41,12.34 17.73,11.08H19V10.04H15.36V9H14.32V10.04H12.36L11.18,6H20A1,1 0 0,1 21,7V20Z' fill='%23161617'/%3E%3C/svg%3E") center / 12px no-repeat;-webkit-transition:all .2s ease;transition:all .2s ease;background-size: 20px 20px;display:inline-block;font-weight:400;line-height: 1.8;padding:0 6px;text-align:center;white-space:nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select: none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-left:none!important;border-top:none!important;border-bottom:none!important;border-right:none!important;border-radius: 4px;}
+
+    </style>
+</html>
+    <title>Agri</title>
+</head>
+<body>
+
+  <!-- <a href="{% url 'main' %}" class="logo d-flex align-items-center">
+    <h1>SMART AGRI<span>.</span></h1>
+  </a> -->
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"><span>Language</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="#">Hindi</a></li>
+                <li><a href="#">Marathi</a></li>
+                <li><a href="#">Gujarati</a></li>
+                <li><a href="#">Bengali</a></li>
+                <li><a href="#">Tamil</a></li>
+                <li><a href="#">Telugu</a></li>
+              </ul>
+            </li>
+
+
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
+
+  <!-- <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'main' %}" class="logo d-flex align-items-center">
+        <h1>SMART AGRI<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="{% url 'main' %}" class="active">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Services</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+              </a>
+              <div id="dd" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Hindi</a>
+                <a class="dropdown-item" href="#">Marathi</a>
+                <a class="dropdown-item" href="#">English</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'main' %}">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom py-3">
+    <div class="container py-1"><a class="navbar-brand text-sm fw-bold text-light" href="{% url 'main' %}">SMART AGRI.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active " href="{% url 'main' %}">Home</a>
+          </li>
+          <!-- <li class="nav-item"><a class="nav-link " href="#latest">Blogs</a>
+          </li> -->
+          <li class="nav-item"><a class="nav-link " href="#posts">Posts</a>
+          </li>
+          <li class="nav-item"><a class="nav-link " href="#">Contact</a>
+          </li>
+          <li class="nav-item" id="google_translate_element">
+              <script>
+                (function(){var gtConstEvalStartTime = new Date();
+                var c="Translate",g=this||self;function h(a,b){a=a.split(".");var d=g;a[0]in d||"undefined"==typeof d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===b?d[e]&&d[e]!==Object.prototype[e]?d=d[e]:d=d[e]={}:d[e]=b}
+                function k(a,b){function d(){}d.prototype=b.prototype;a.ka=b.prototype;a.prototype=new d;a.prototype.constructor=a;a.ja=function(e,f,v){for(var w=Array(arguments.length-2),n=2;n<arguments.length;n++)w[n-2]=arguments[n];return b.prototype[f].apply(e,w)}}function l(a){return a};function m(){return"[msg_undefined]"}var p={};
+                (function(){if(void 0==window.CLOSURE_DEFINES||window.CLOSURE_DEFINES["te.msg.EMBED_MESSAGES"]){p={Y:function(){return MSG_TRANSLATE},m:function(){return MSG_CANCEL},s:function(){return MSG_CLOSE},K:function(){return MSGFUNC_PAGE_TRANSLATED_TO},Z:function(){return MSGFUNC_TRANSLATED_TO},B:function(){return MSG_GENERAL_ERROR},D:function(){return MSG_LANGUAGE_UNSUPPORTED},F:function(){return MSG_LEARN_MORE},L:function(){return MSGFUNC_POWERED_BY},ba:function(){return MSG_TRANSLATE_PRODUCT_NAME},da:function(){return MSG_TRANSLATION_IN_PROGRESS},
+                aa:function(){return MSGFUNC_TRANSLATE_PAGE_TO},ia:function(){return MSGFUNC_VIEW_PAGE_IN},M:function(){return MSG_RESTORE},U:function(){return MSG_SSL_INFO_LOCAL_FILE},V:function(){return MSG_SSL_INFO_SECURE_PAGE},T:function(){return MSG_SSL_INFO_INTRANET_PAGE},N:function(){return MSG_SELECT_LANGUAGE},fa:function(){return MSGFUNC_TURN_OFF_TRANSLATION},ea:function(){return MSGFUNC_TURN_OFF_FOR},l:function(){return MSG_ALWAYS_HIDE_AUTO_POPUP_BANNER},I:function(){return MSG_ORIGINAL_TEXT},J:function(){return MSG_ORIGINAL_TEXT_NO_COLON},
+                A:function(){return MSG_FILL_SUGGESTION},W:function(){return MSG_SUBMIT_SUGGESTION},S:function(){return MSG_SHOW_TRANSLATE_ALL},R:function(){return MSG_SHOW_RESTORE_ALL},O:function(){return MSG_SHOW_CANCEL_ALL},ca:function(){return MSG_TRANSLATE_TO_MY_LANGUAGE},$:function(){return MSGFUNC_TRANSLATE_EVERYTHING_TO},P:function(){return MSG_SHOW_ORIGINAL_LANGUAGES},H:function(){return MSG_OPTIONS},ga:function(){return MSG_TURN_OFF_TRANSLATION_FOR_THIS_SITE},G:function(){return MSG_MANAGE_TRANSLATION_FOR_THIS_SITE},
+                j:function(){return MSG_ALT_SUGGESTION},h:function(){return MSG_ALT_ACTIVITY_HELPER_TEXT},i:function(){return MSG_ALT_AND_CONTRIBUTE_ACTIVITY_HELPER_TEXT},ha:function(){return MSG_USE_ALTERNATIVES},v:function(){return MSG_DRAG_TIP},o:function(){return MSG_CLICK_FOR_ALT},u:function(){return MSG_DRAG_INSTUCTIONS},X:function(){return MSG_SUGGESTION_SUBMITTED},C:function(){return MSG_LANGUAGE_TRANSLATE_WIDGET}};for(var a in p)if(p[a]!==Object.prototype[p[a]])try{p[a]=p[a].call(null)}catch(b){p[a]=m}}else a=
+                function(b){return function(){return b}},p={Y:a(0),m:a(1),s:a(2),K:a(3),Z:a(4),B:a(5),D:a(45),F:a(6),L:a(7),ba:a(8),da:a(9),aa:a(10),ia:a(11),M:a(12),U:a(13),V:a(14),T:a(15),N:a(16),fa:a(17),ea:a(18),l:a(19),I:a(20),A:a(21),W:a(22),S:a(23),R:a(24),O:a(25),ca:a(26),$:a(27),P:a(28),H:a(29),ga:a(30),j:a(32),h:a(33),ha:a(34),v:a(35),o:a(36),u:a(37),X:a(38),G:a(39),i:a(40),J:a(41),C:a(46)}})();var q={},MSG_TRANSLATE=c;q[0]=MSG_TRANSLATE;var MSG_CANCEL="Cancel";q[1]=MSG_CANCEL;var MSG_CLOSE="Close";q[2]=MSG_CLOSE;function MSGFUNC_PAGE_TRANSLATED_TO(a){return"Google has automatically translated this page to: "+a}q[3]=MSGFUNC_PAGE_TRANSLATED_TO;function MSGFUNC_TRANSLATED_TO(a){return"Translated to: "+a}q[4]=MSGFUNC_TRANSLATED_TO;var MSG_GENERAL_ERROR="Error: The server could not complete your request. Try again later.";q[5]=MSG_GENERAL_ERROR;var MSG_LEARN_MORE="Learn more";q[6]=MSG_LEARN_MORE;
+                function MSGFUNC_POWERED_BY(a){return"Powered by "+a}q[7]=MSGFUNC_POWERED_BY;var MSG_TRANSLATE_PRODUCT_NAME=c;q[8]=MSG_TRANSLATE_PRODUCT_NAME;var MSG_TRANSLATION_IN_PROGRESS="Translation in progress";q[9]=MSG_TRANSLATION_IN_PROGRESS;function MSGFUNC_TRANSLATE_PAGE_TO(a){return"Translate this page to: "+(a+" using Google Translate?")}q[10]=MSGFUNC_TRANSLATE_PAGE_TO;function MSGFUNC_VIEW_PAGE_IN(a){return"View this page in: "+a}q[11]=MSGFUNC_VIEW_PAGE_IN;var MSG_RESTORE="Show original";q[12]=MSG_RESTORE;
+                var MSG_SSL_INFO_LOCAL_FILE="The content of this local file will be sent to Google for translation using a secure connection.";q[13]=MSG_SSL_INFO_LOCAL_FILE;var MSG_SSL_INFO_SECURE_PAGE="The content of this secure page will be sent to Google for translation using a secure connection.";q[14]=MSG_SSL_INFO_SECURE_PAGE;var MSG_SSL_INFO_INTRANET_PAGE="The content of this intranet page will be sent to Google for translation using a secure connection.";q[15]=MSG_SSL_INFO_INTRANET_PAGE;
+                var MSG_SELECT_LANGUAGE="Select Language";q[16]=MSG_SELECT_LANGUAGE;function MSGFUNC_TURN_OFF_TRANSLATION(a){return"Turn off "+(a+" translation")}q[17]=MSGFUNC_TURN_OFF_TRANSLATION;function MSGFUNC_TURN_OFF_FOR(a){return"Turn off for: "+a}q[18]=MSGFUNC_TURN_OFF_FOR;var MSG_ALWAYS_HIDE_AUTO_POPUP_BANNER="Always hide";q[19]=MSG_ALWAYS_HIDE_AUTO_POPUP_BANNER;var MSG_ORIGINAL_TEXT="Original text:";q[20]=MSG_ORIGINAL_TEXT;var MSG_FILL_SUGGESTION="Contribute a better translation";q[21]=MSG_FILL_SUGGESTION;
+                var MSG_SUBMIT_SUGGESTION="Contribute";q[22]=MSG_SUBMIT_SUGGESTION;var MSG_SHOW_TRANSLATE_ALL="Translate all";q[23]=MSG_SHOW_TRANSLATE_ALL;var MSG_SHOW_RESTORE_ALL="Restore all";q[24]=MSG_SHOW_RESTORE_ALL;var MSG_SHOW_CANCEL_ALL="Cancel all";q[25]=MSG_SHOW_CANCEL_ALL;var MSG_TRANSLATE_TO_MY_LANGUAGE="Translate sections to my language";q[26]=MSG_TRANSLATE_TO_MY_LANGUAGE;function MSGFUNC_TRANSLATE_EVERYTHING_TO(a){return"Translate everything to "+a}q[27]=MSGFUNC_TRANSLATE_EVERYTHING_TO;
+                var MSG_SHOW_ORIGINAL_LANGUAGES="Show original languages";q[28]=MSG_SHOW_ORIGINAL_LANGUAGES;var MSG_OPTIONS="Options";q[29]=MSG_OPTIONS;var MSG_TURN_OFF_TRANSLATION_FOR_THIS_SITE="Turn off translation for this site";q[30]=MSG_TURN_OFF_TRANSLATION_FOR_THIS_SITE;q[31]=null;var MSG_ALT_SUGGESTION="Show alternative translations";q[32]=MSG_ALT_SUGGESTION;var MSG_ALT_ACTIVITY_HELPER_TEXT="Click on words above to get alternative translations";q[33]=MSG_ALT_ACTIVITY_HELPER_TEXT;var MSG_USE_ALTERNATIVES="Use";
+                q[34]=MSG_USE_ALTERNATIVES;var MSG_DRAG_TIP="Drag with shift key to reorder";q[35]=MSG_DRAG_TIP;var MSG_CLICK_FOR_ALT="Click for alternative translations";q[36]=MSG_CLICK_FOR_ALT;var MSG_DRAG_INSTUCTIONS="Hold down the shift key, click, and drag the words above to reorder.";q[37]=MSG_DRAG_INSTUCTIONS;var MSG_SUGGESTION_SUBMITTED="Thank you for contributing your translation suggestion to Google Translate.";q[38]=MSG_SUGGESTION_SUBMITTED;var MSG_MANAGE_TRANSLATION_FOR_THIS_SITE="Manage translation for this site";
+                q[39]=MSG_MANAGE_TRANSLATION_FOR_THIS_SITE;var MSG_ALT_AND_CONTRIBUTE_ACTIVITY_HELPER_TEXT="Click a word for alternative translations, or double-click to edit directly";q[40]=MSG_ALT_AND_CONTRIBUTE_ACTIVITY_HELPER_TEXT;var MSG_ORIGINAL_TEXT_NO_COLON="Original text";q[41]=MSG_ORIGINAL_TEXT_NO_COLON;q[42]=c;q[43]=c;q[44]="Your correction has been submitted.";var MSG_LANGUAGE_UNSUPPORTED="Error: The language of the webpage is not supported.";q[45]=MSG_LANGUAGE_UNSUPPORTED;
+                var MSG_LANGUAGE_TRANSLATE_WIDGET="Language Translate Widget";q[46]=MSG_LANGUAGE_TRANSLATE_WIDGET;function r(a){if(Error.captureStackTrace)Error.captureStackTrace(this,r);else{var b=Error().stack;b&&(this.stack=b)}a&&(this.message=String(a))}k(r,Error);r.prototype.name="CustomError";function t(a,b){a=a.split("%s");for(var d="",e=a.length-1,f=0;f<e;f++)d+=a[f]+(f<b.length?b[f]:"%s");r.call(this,d+a[e])}k(t,r);t.prototype.name="AssertionError";function u(a,b){throw new t("Failure"+(a?": "+a:""),Array.prototype.slice.call(arguments,1));};var x;function y(a,b){this.g=b===z?a:""}y.prototype.toString=function(){return this.g+""};var z={};function _exportMessages(){h("google.translate.m",q)}function A(a){var b=document.getElementsByTagName("head")[0];b||(b=document.body.parentNode.appendChild(document.createElement("head")));b.appendChild(a)}
+                function _loadJs(a){var b=document;var d="SCRIPT";"application/xhtml+xml"===b.contentType&&(d=d.toLowerCase());d=b.createElement(d);d.type="text/javascript";d.charset="UTF-8";if(void 0===x){b=null;var e=g.trustedTypes;if(e&&e.createPolicy){try{b=e.createPolicy("goog#html",{createHTML:l,createScript:l,createScriptURL:l})}catch(v){g.console&&g.console.error(v.message)}x=b}else x=b}a=(b=x)?b.createScriptURL(a):a;a=new y(a,z);a instanceof y&&a.constructor===y?a=a.g:(b=typeof a,u("expected object of type TrustedResourceUrl, got '"+
+                a+"' of type "+("object"!=b?b:a?Array.isArray(a)?"array":b:"null")),a="type_error:TrustedResourceUrl");d.src=a;var f;a=(d.ownerDocument&&d.ownerDocument.defaultView||window).document;(f=(a=null===(f=a.querySelector)||void 0===f?void 0:f.call(a,"script[nonce]"))?a.nonce||a.getAttribute("nonce")||"":"")&&d.setAttribute("nonce",f);A(d)}function _loadCss(a){var b=document.createElement("link");b.type="text/css";b.rel="stylesheet";b.charset="UTF-8";b.href=a;A(b)}
+                function _isNS(a){a=a.split(".");for(var b=window,d=0;d<a.length;++d)if(!(b=b[a[d]]))return!1;return!0}function _setupNS(a){a=a.split(".");for(var b=window,d=0;d<a.length;++d)b.hasOwnProperty?b.hasOwnProperty(a[d])?b=b[a[d]]:b=b[a[d]]={}:b=b[a[d]]||(b[a[d]]={});return b}h("_exportMessages",_exportMessages);h("_loadJs",_loadJs);h("_loadCss",_loadCss);h("_isNS",_isNS);h("_setupNS",_setupNS);
+                window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+                if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en-GB';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='450465.1037093230';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main_en-GB.js');})();})();
+                function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,en-US,te,ta,gu,ur,mr,ml,hi,bn,kn',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element')}$(".hover").mouseleave(function (){$(this).removeClass("hover")});
+                </script>
+              <!-- <a class="dropdown-item" href="#">Hindi</a>
+              <a class="dropdown-item" href="#">Marathi</a>
+              <a class="dropdown-item" href="#">English</a> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cover-container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="d-block w-100" id= "blur" src="{% static 'images/agri1.jpeg' %}" class="d-block w-100 inner-images"
+              style="height: 400px;" alt="Image not available">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>“Artifical Intelligence will make a big difference in the field of agriculture.”
+                    <p style="text-align:right;"><h6>&nbsp;&nbsp;&nbsp; -Swami Vivekananda</h6></p>
+                    </h5>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="{% static 'images/img1.jpg' %}" class="d-block w-100 inner-images"
+              style="height: 400px;" alt="Image not available">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>“Your body holds deep wisdom. Trust in it. Learn from it. Nourish it. Watch your life transform and be healthy.”
+                    <p style="text-align:right;"><h6>&nbsp;&nbsp;&nbsp; -Bella Bleue</h6></p>
+                    </h5>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="{% static 'images/agri15.jpg' %}" class="d-block w-100 inner-images"
+              style="height: 400px;" alt="Image not available">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>“The human body is the best picture of the human soul.”
+                    <p style="text-align:right;"><h6>&nbsp;&nbsp;&nbsp; -Tony Robbins</h6></p>
+                    </h5>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <hr>
+
+<marquee direction="right" style="margin-top: 15px;font-size: 20px;font-weight: 700;" behaviour="alternate">ARTIFICIAL INTELLIGENCE AND ITS BRANCHES IN AGRICULTURE BLOGS</marquee>
+
+<div class="container marketing" id="posts">
+  {% for post in posts %}
+  <hr class="featurette-divider">
+  <div class="row d-flex align-items-stretch g-0">
+    <div class="col-lg-7">
+      <div class="text-inner d-flex align-items-center h-100 bg-light">
+        <div class="content px-4 px-lg-5">
+          <h2 class="h4 mb-3"><a class="text-dark" href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+          <p class="text-sm">{{post.content|truncatechars:60|safe}}</p>
+          <ul class="list-inline list-separated text-gray-500 mb-0">
+            <li class="list-inline-item small"><i class="far fa-clock"></i>{{ post.author.username }}</li>
+            <li class="list-inline-item small"><i class="far fa-clock"></i>{{ post.publish|date }}</li>
+            <li class="list-inline-item small"><i class="far fa-comment"></i> 12</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5"><img class="featurette-image img-fluid mx-auto" data-src="holder.js/1000x1000/auto" alt="500x500"
+      style="width: 10000px; height: 300px; float:left;"
+      src="{{ post.image.url }}"></div>
+  </div>
+  {% endfor %}
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- <section style="background: url({% static 'images/divider-bg.jpg' %}); background-size: cover; background-position: center bottom" class="divider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 text-white">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><a href="#" class="hero-link">View More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="latest-posts" id="latest"> 
+  <div class="container">
+    <header> 
+      <h2>Latest blogs</h2>
+      <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </header>
+    <div class="row">
+      {% for obj in posts %}
+      <div class="post col-md-4">
+        <div class="post-thumbnail"><a href="#"><img src="{{ obj.image.url }}" alt="..." class="img-fluid" style="width: 1000px; height: 200px; float:left;"></a></div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">{{ obj.publish }}</div>
+          </div>
+            <h4><a class="text-dark" href="{{obj.get_absolute_url}}">{{ obj.title }}</h4></a>
+          <p class="text">{{ obj.content|truncatechars:100|safe }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> -->
+
+<footer class="footer text-white" style="background: #0e0e0e">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h6 class="text-white">Kshitija Lade</h6>
+        <p class="fw-light mb-1">Everest World Thane Mumbai-400670</p>
+        <p class="fw-light mb-1">Phone: 7666487777</p>
+        <p class="fw-light mb-4">Email: <a class="text-decoration-underline text-reset" href="mailto:info@company.com">kvlade1309@gmail.com</a></p>
+        <ul class="list-unstyled">
+          <li class="list-inline-item"><a class="text-reset me-2" href=""><i class="fab fa-telegram"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="https://github.com/Kshitija13"><i class="fab fa-github"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="https://www.instagram.com/_kshitija1303_/"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="http://www.linkedin.com/in/kshitijalade"><i class="fab fa-linkedin"></i></a></li>
+          <li class="list-inline-item"><a class="text-reset me-2" href="http://kshitijabio.infinityfreeapp.com/"><i class="fa fa-user"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="d-flex align-items-center">
+          <ul class="list-unstyled text-sm me-4">
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">My Account</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">Add Listing</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">Pricing</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">Privacy &amp; Policy</a></li>
+          </ul>
+          <ul class="list-unstyled text-sm">
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">Our Partners</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">FAQ</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">How It Works</a></li>
+            <li class="mb-2"><a class="text-reset fw-light" href="!#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <class class="container marketing">
+
+      <hr class="featurette-divider">
+      <a href="{{post.get_absolute_url}}">
+      <div class="row featurette" data-aos="fade-in" data-aos-duration="1000">
+          
+          <div class="col-md-7">
+              <h2 class="dia featurette-heading" style="color: black !important; font-family: 'Times New Roman', Times, serif;">{{post.title}}</h2>
+              <p class="lead" style="text-align: left;color: black; font-family: 'Times New Roman', Times, serif;">{{post.content|truncatechars:60|safe}}</p>
+              <p class="lead1" style="text-align: left;color: black; font-family: 'Times New Roman', Times, serif;">Posted by {{ post.author.username }}</p>
+              <p class="lead1" style="text-align: left;color: black; font-family: 'Times New Roman', Times, serif;">{{ post.publish|date }}</p>
+              
+          </div>
+          <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/1000x1000/auto" alt="500x500"
+                  style="width: 10000px; height: 300px; float:left;"
+                  src="{{ post.image.url }}">
+          </div>
+          
+      </div>
+      </a>
+</div> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
+
+  <!-- <div class="wrapper">
+    <div class="inner">
+      <form action="">
+        <h3>Contact Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <label class="form-group">
+          <input type="text" class="form-control"  required>
+          <span>Your Name</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="text" class="form-control"  required>
+          <span for="">Your Mail</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group" >
+          <textarea name="" id="" class="form-control" required></textarea>
+          <span for="">Your Message</span>
+          <span class="border"></span>
+        </label>
+        <button>Submit 
+          <i class="zmdi zmdi-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ?{% now 'U' %}">
+</head>
+<body> -->
+
+
+<!-- <div class="container">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#charts">Charts</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav> -->
+        <!-- <div class="page-wrapper">
+            <div class="nav-wrapper">
+             <div class="grad-bar"></div>
+             <nav class="navbar">
+               <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Bluestar_%28bus_company%29_logo.svg/1280px-Bluestar_%28bus_company%29_logo.svg.png" alt="Company Logo">
+               <div class="menu-toggle" id="mobile-menu">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+               </div>
+               <ul class="nav no-search">
+                 <li class="nav-item"><a href="#">Home</a></li>
+                 <li class="nav-item"><a href="#">About</a></li>
+                 <li class="nav-item"><a href="#">Work</a></li>
+                 <li class="nav-item"><a href="#">Careers</a></li>
+                 <li class="nav-item"><a href="#">Contact Us</a></li>
+                 <i class="fas fa-search" id="search-icon"></i>
+                 <input class="search-input" type="text" placeholder="Search..">
+               </ul>
+             </nav>
+             </div>
+             <section class="headline">
+               <h1>Responsive Navigation</h1>
+               <p>Using CSS grid and flexbox to easily build navbars!</p>
+             </section>
+             <section class="features">
+               <div class="feature-container">
+                 <img src="https://cdn-images-1.medium.com/max/2000/1*HFAEJvVOq4AwFuBivNu_OQ.png" alt="Flexbox Feature">
+                 <h2>Flexbox Featured</h2>
+                 <p>This pen contains use of flexbox for the headline and feature section! We use it in our mobile navbar and show the power of mixing css grid and flexbox.</p>
+               </div>
+               <div class="feature-container">
+                 <img src="https://blog.webix.com/wp-content/uploads/2017/06/20170621-CSS-Grid-Layout-710x355-tiny.png" alt="Flexbox Feature">
+                 <h2>CSS Grid Navigation</h2>
+                 <p>While flexbox is used for the the mobile navbar, CSS grid is used for the desktop navbar showing many ways we can use both.</p>
+               </div>
+               <div class="feature-container">
+                 <img src="https://www.graycelltech.com/wp-content/uploads/2015/06/GCT-HTML5.jpg" alt="Flexbox Feature">
+                 <h2>Basic HTML5</h2>
+                 <p>This pen contains basic html to setup the page to display the responsive navbar.</p>
+               </div>
+             </section>
+           </div> -->
+        <!-- <div><button onclick="'clicked()'">Click Me</button></div> -->
+
+
+    <!-- <section id="home">
+        <hr>
+        {% if result %}
+            <h3>The Emotion is {{result}}</h3>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                Input Text: <input type="text" name="ip"><br>
+                <input type = "submit">
+              </div>
+        </form>
+    </section>
+    <section class= "about" id="about">
+        <h1>About</h1> -->
+        <!-- <form action="dia_res" method="get">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="Pregnancy" class="modal-label" style="text-align: center;">Pregnancy</label> <input type="number" name="Pregnancy" class="form-control" style="border-style: solid;" required />
+            <label for="Glucose" class="modal-label" style="text-align: center;">Glucose</label> <input type="number" name="Glucose" class="form-control" style="border-style: solid;" required />
+            <label for="BP" class="modal-label" style="text-align: center;">BP</label> <input type="number" name="BP" class="form-control" style="border-style: solid;" required />
+            <label for="Skin Thickness" class="modal-label" style="text-align: center;">Skin Thickness</label> <input type="number" name="Skin Thickness" class="form-control" style="border-style: solid;" required />
+            <label for="Insulin" class="modal-label" style="text-align: center;">Insulin</label> <input type="number" name="Insulin" class="form-control" style="border-style: solid;" required />
+            <label for="BMI" class="modal-label" style="text-align: center;">BMI</label> <input type="number" step = "0.01" name="BMI" class="form-control" style="border-style: solid;" required />
+            <label for="DPF" class="modal-label" style="text-align: center;">DPF</label> <input type="number" step = "0.01" name="DPF" class="form-control" style="border-style: solid;" required />
+            <label for="Age" class="modal-label" style="text-align: center;">Age</label> <input type="number" name="Age" class="form-control" style="border-style: solid;" required />
+            <input type="submit">
+          </div>
+        </form> -->
+    <!-- </section> -->
+    <!-- <section id="charts">
+        <h1>Charts</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+    </section>
+    <section id="market">
+        <h1>Market</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+    </section>
+  </div> -->
+
+</div>
+{% load static %}
+<script>
+</script>
+</body>
+</html>
